@@ -1,40 +1,40 @@
 # Fire Hazard Mapping and Incident Reporting System
 
-A full-stack Web GIS platform designed for spatial risk assessment, hazard mapping, and time-series incident forecasting within Mandaluyong City.
+A Web GIS platform designed for spatial risk assessment, hazard mapping, and time-series incident forecasting within Mandaluyong City, developed as a Capstone Research Project at José Rizal University.
 
 ---
 
 ## Overview
 
-Assessing urban fire vulnerabilities requires spatial data analysis combined with historical incident patterns. This platform was developed to map high-risk zones, track municipal fire incidents, and support spatial decision-making through interactive web mapping and predictive data modeling.
+Assessing urban fire vulnerabilities requires spatial data analysis combined with historical incident patterns. This platform was developed to map high-risk zones, track municipal fire incidents, and support spatial decision-making by integrating BFP Mandaluyong datasets into an interactive mapping interface.
 
 ---
 
-## Tech Stack
+## Tech Stack & Data Tools
 
-- Frontend: React, TypeScript, HTML, CSS
-- Backend: Node.js, Express
-- Database: PostgreSQL (with spatial data extensions)
-- GIS & Mapping: Leaflet / OpenLayers integration
-- Forecasting: Time-series statistical models
+- Frontend: React.js
+- Mapping & Geolocation: Google Maps API, GeoJSON (Barangay boundaries, fire hydrant locations, incident hotspots)
+- Backend & Data Processing: Python, Pandas (API construction, dataset transformation, and data cleaning)
+- Data Analysis & Preprocessing: Microsoft Excel (Data filtering, tabulation, and initial analysis)
 
 ---
 
 ## Key Features
 
-- Interactive Web GIS Mapping: Visualizes fire incident hotspots, barangay boundaries, and high-risk zones using custom map layers.
-- Incident Reporting Dashboard: Allows authorized users to log, update, and monitor local fire safety incidents in real time.
-- Time-Series Forecasting: Integrates analytical models to project future incident trends based on historical municipal data.
-- Role-Based Access: Secures administrative controls for managing hazard data and user records.
+- Interactive Web GIS Mapping: Renders custom GeoJSON layers to distinguish barangay boundaries, fire hydrant networks, and historical incident hotspots.
+- BFP Dataset Integration: Processes raw operational data from the Bureau of Fire Protection (BFP) Mandaluyong, including incident records and infrastructure locations.
+- Data Processing Pipeline: Uses Python and Pandas to clean, filter, and format multi-source municipal datasets into structured API endpoints for frontend rendering.
+- Spatial Risk Assessment: Overlays infrastructure inventory against incident frequency to highlight safety gaps and high-risk urban zones.
 
 ---
 
-## System Architecture
+## System Workflow
 
-1. Data Collection & Storage: Incident logs and spatial coordinates are stored and managed in a PostgreSQL database.
-2. Backend Services: Node.js and Express REST APIs handle data queries, user authentication, and forecasting requests.
-3. Spatial Rendering: The React frontend renders interactive maps and dashboard metrics for end-users and administrators.
+1. Data Preprocessing: BFP datasets on fire incidents, hydrant inventory, and municipal statistics are organized and cleaned using Excel and Pandas.
+2. Spatial Mapping & Boundary Setup: GeoJSON files are configured to segment Mandaluyong City barangay boundaries and map infrastructure coordinates.
+3. Backend Service: Python-based services process spatial data and deliver structured API payloads to the web interface.
+4. Interface Rendering: The React.js frontend interacts with Google Maps API to display interactive overlays and spatial analytics.
 
 ---
 
-*Developed as a capstone research and software development project for Mandaluyong City.*
+*Developed as a Capstone Research Project at José Rizal University in collaboration with BFP Mandaluyong.*
